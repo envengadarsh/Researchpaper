@@ -38,11 +38,11 @@
 ## D. EMC, first flush and monitoring
 
 25. Bertrand-Krajewski, J.-L., Chebbo, G., & Saget, A. (1998). *Distribution of pollutant mass vs volume in stormwater discharges and the first flush phenomenon*. Water Research, 32(8), 2341–2356. DOI: [10.1016/S0043-1354(97)00420-X](https://doi.org/10.1016/S0043-1354(97)00420-X). Mass-volume curves and first-flush variability.
-26. Deletic, A. (1998). *The first flush load of urban surface runoff*. Water Research, 32(8), 2462–2470. DOI: [10.1016/S0043-1354(97)004 preco]. Verify DOI and pages from publisher record; foundational first-flush study.
+26. Deletic, A. (1998). *The first flush load of urban surface runoff*. Water Research, 32(8), 2462–2470. DOI: [10.1016/S0043-1354(97)00470-3](https://doi.org/10.1016/S0043-1354(97)00470-3). Publisher metadata and abstract record located; full-text appraisal pending.
 27. Perera, T. et al. (2021). *Catchment based estimation of pollutant event mean concentration (EMC) and implications for first flush assessment*. Journal of Environmental Management, 279, 111737. DOI: [10.1016/j.jenvman.2020.111737](https://doi.org/10.1016/j.jenvman.2020.111737). Catchment factors and EMC.
 28. Perera, T. et al. (2021). *New conceptualisation of first flush phenomena in urban catchments*. Journal of Environmental Management, 281, 111820. DOI: [10.1016/j.jenvman.2020.111820](https://doi.org/10.1016/j.jenvman.2020.111820). Pollutograph-based first-flush conceptualisation.
 29. Gao, Z. et al. (2023). *First flush stormwater pollution in urban catchments: A review of its characterization and quantification towards optimization of control measures*. Journal of Environmental Management, 340, 117976. DOI: [10.1016/j.jenvman.2023.117976](https://doi.org/10.1016/j.jenvman.2023.117976). First-flush review.
-30. Razguliaev, N. et al. (2024). *Urban stormwater quality: A review of methods for continuous field monitoring*. Water Research, 249, 120929. DOI: [10.1016/j.watres.2023.120929](https://doi.org/10.1016/j.watres.2023.120929). Continuous monitoring methods.
+30. Razguliaev, N., Flanagan, K., Muthanna, T., & Viklander, M. (2024). *Urban stormwater quality: A review of methods for continuous field monitoring*. Water Research, 249, 120929. DOI: [10.1016/j.watres.2023.120929](https://doi.org/10.1016/j.watres.2023.120929). Review reports that only a limited set of parameters can be directly measured continuously and that field deployment/data quality remain challenges; full-text appraisal pending.
 
 ## E. GI/LID, treatment and spatial evidence
 
