@@ -17,7 +17,7 @@
 
 ## Status
 
-**Version 0.4 — living LaTeX manuscript created.** Six records have verified bibliographic metadata. The master LaTeX manuscript is organised section by section and includes the current evidence, explicit evidence-status notes, and a proposed Bhopal application framework. Three full texts (Niazi et al., 2017; Razguliaev et al., 2024; Bhusal & Muthukumaran, 2026) have been appraised, while four records remain abstract/publisher-excerpt level. A compiled PDF is available in the user's ChatGPT Library under /Researchpaper/main.pdf; the editable source is /Researchpaper/main.tex. The LaTeX source is committed in manuscript/main.tex. The 40-paper bibliography remains provisional; further screening, metadata checks and full-text appraisal are required. The manuscript is not submission-ready.
+**Version 0.5 — living LaTeX manuscript updated and compiled.** Nine records have verified bibliographic metadata. The master LaTeX manuscript is organised section by section and includes the current evidence, explicit evidence-status notes, and a proposed Bhopal application framework. Three full texts (Niazi et al., 2017; Razguliaev et al., 2024; Bhusal & Muthukumaran, 2026) have been appraised, while six records remain at abstract, publisher-excerpt or metadata level. A compiled PDF is available in the user's ChatGPT Library under /Researchpaper/main.pdf; the editable source is /Researchpaper/main.tex. The LaTeX source is committed in manuscript/main.tex. The 40-paper bibliography remains provisional; further screening, metadata checks and full-text appraisal are required. The manuscript is not submission-ready.
 
 ## Research questions
 
