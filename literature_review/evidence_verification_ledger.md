@@ -15,6 +15,8 @@ This ledger records what was verified from publisher, PubMed/PMC or official EPA
 | Deletic (1998), *The first flush load of urban surface runoff*, DOI 10.1016/S0043-1354(97)00470-3 | Verified title, journal, volume 32, issue 8, pages 2462–2470 and corrected DOI | ScienceDirect abstract record | Abstract assessed; full text not yet appraised | Examines continuous monitoring at road inlets in two asphalt catchments and uses cumulative pollutant-load curves and FF20 |
 | Mishra & Botlaguduru (2025), *Characterization of stormwater runoff in the Powai region of Mumbai*, DOI 10.1007/s10661-025-14028-z | Verified: both authors, journal, volume 197, issue 5, article 577, publication date and DOI | PubMed record and abstract | Abstract assessed; full text not yet appraised | Highly relevant Indian monsoon context; do not infer transferability to Bhopal without comparing catchment, rainfall, land use, constituents and sampling design |
 
+| Bhusal & Muthukumaran (2026), *Event Mean Concentration-based Modelling Approach for a Large Scale Spatially Heterogenous Catchment using SWMM*, DOI 10.1007/s11269-025-04407-z | Verified: authors, journal, volume, article number, publication date and DOI | Full open-access publisher article | Full text appraised on 3 November 2026 | SWMM 5.2; approximately 1,450 km² Maribyrnong catchment; nine GIS subcatchments; hydrology calibrated/validated; TN validation based on 22 observations; TP not validated; static EMC limitations discussed |
+
 ## Primary official model documentation
 
 The US EPA SWMM page documents that SWMM can simulate single-event and long-term runoff quantity and quality; route flows through drainage networks; represent hydrologic processes; estimate pollutant buildup and washoff; route water-quality constituents; and represent eight generic GI/LID controls. The EPA page lists the SWMM 5.2 User's Manual (2022), Hydrology Reference Manual, Hydraulics Reference Manual and Water Quality Reference Manual. These are technical documentation, not peer-reviewed studies.
@@ -38,8 +40,8 @@ Official source: https://www.epa.gov/water-research/storm-water-management-model
 ## Status after scope selection and second audit (3 November 2026)
 
 - Scope selected: integrated urban stormwater quantity and quality modelling, with EPA-SWMM as the principal platform.
-- Six records have verified bibliographic metadata.
-- Two papers (Niazi et al. 2017; Razguliaev et al. 2024) have been read and full-text appraised; four remain abstract-level only.
+- Seven records have verified bibliographic metadata.
+- Three papers (Niazi et al. 2017; Razguliaev et al. 2024; Bhusal & Muthukumaran 2026) have been read and full-text appraised; four remain abstract-level only.
 - A detailed appraisal and cross-paper synthesis is recorded in `full_text_appraisal_integrated_scope.md`.
 - The remaining candidate records still require independent metadata verification and eligibility screening.
 - The 40-paper set remains provisional; remove or replace unverifiable/non-peer-reviewed records rather than forcing the count to 40.
