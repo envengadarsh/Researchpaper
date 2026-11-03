@@ -10,12 +10,13 @@
 - [40-paper candidate annotated bibliography](literature_review/annotated_bibliography_40_candidates.md)
 - [Evidence verification ledger](literature_review/evidence_verification_ledger.md)
 - [Literature extraction matrix (CSV)](literature_review/literature_extraction_matrix.csv)
+- [Full-text appraisal and integrated synthesis](literature_review/full_text_appraisal_integrated_scope.md)
 - [Review protocol and search strategy](literature_review/review_protocol.md)
 - [Proposed MANIT Bhopal framework](methodology/proposed_framework.md)
 
 ## Status
 
-**Version 0.2 — first evidence audit committed.** Six records have verified bibliographic metadata and abstract-level evidence; full-text appraisal remains pending. The candidate bibliography includes corrected Deletic (1998) DOI and complete Razguliaev et al. (2024) authors. The bibliography is a candidate corpus, not a claim that 40 full texts have been read. Full-text retrieval, eligibility screening, detailed extraction, quality appraisal and metadata verification remain pending. The manuscript is not submission-ready.
+**Version 0.3 — integrated scope selected; second evidence audit committed.** Six records have verified bibliographic metadata. Two full texts (Niazi et al., 2017; Razguliaev et al., 2024) have been appraised, while four records remain abstract-level only. A new full-text appraisal file records paper-level evidence, limitations and cross-paper implications. The 40-paper bibliography remains provisional; further screening, metadata checks and full-text appraisal are required. The manuscript is not submission-ready.
 
 ## Research questions
 
@@ -37,9 +38,9 @@
 
 ## Next steps
 
-1. Execute and log database searches.
-2. Deduplicate and screen candidate records.
-3. Retrieve full texts and complete the extraction matrix.
-4. Critically appraise methods and evidence.
-5. Revise the manuscript around the completed synthesis.
+1. Expand the full-text audit across high-priority quantity, quality, calibration and LID papers.
+2. Verify and screen the candidate bibliography; record exclusions and reasons.
+3. Complete the extraction matrix, including model version, data resolution, calibration and validation metrics.
+4. Compare quantity and quality evaluation practices across studies.
+5. Revise the manuscript after the evidence synthesis is sufficiently complete.
 6. Obtain supervisor/co-author review before journal submission.
