@@ -1,67 +1,46 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[journal]{IEEEtran}
 
 % ============================================================
 % Living manuscript source — update section by section.
 % Compile with: pdflatex main.tex (run twice for references).
 % ============================================================
-\usepackage[margin=1in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{array}
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
 \usepackage{enumitem}
+\usepackage{cite}
 \usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{natbib}
-\usepackage{caption}
-\usepackage{float}
-\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
-\setstretch{1.35}
-\setlength{\parskip}{0.45em}
-\setlength{\parindent}{0pt}
+\hypersetup{hidelinks}
+\urlstyle{same}
 
-\title{\textbf{Integrated Urban Stormwater Quantity and Quality Modelling Using EPA-SWMM:}\\
-A Critical Review of Methods, Evidence, Uncertainty and Sustainable Management}
-\author{Adarsh Chourasiya\\
-\small Affiliation and co-author details to be confirmed}
-\date{Working manuscript v0.5 \quad | \quad 3 November 2026}
+\title{Integrated Urban Stormwater Quantity and Quality Modelling Using EPA-SWMM: A Critical Review of Methods, Evidence, Uncertainty and Sustainable Management\\\thanks{Working manuscript v0.6, November 3, 2026. Under development; not submission-ready.}}
+\author{Adarsh~Chourasiya\thanks{Affiliation and corresponding-author details to be confirmed.}}
 
 \begin{document}
 \maketitle
 
-\begin{center}
-\textbf{Manuscript status: Living working draft --- not submission-ready}
-\end{center}
 
-\begin{quote}
-\textbf{Research-integrity note.} This document is being developed section by section as the literature review and evidence appraisal progress. The current evidence register contains seven audited records, of which three have been appraised using accessible full texts and four remain at abstract or publisher-excerpt level. The candidate bibliography is not a completed systematic-review sample. No field observations, calibrated results, measured campus characteristics, or model outputs are claimed. The proposed MANIT Bhopal application is a framework, not a completed case study.
-\end{quote}
-
+\noindent\textit{Evidence status:} The current evidence register contains seven audited records; three have full-text appraisal and four remain at abstract or publisher-excerpt level. The candidate bibliography is not a completed systematic-review sample. No site observations or calibrated campus outputs are claimed.\n
 \begin{abstract}
 Urban stormwater runoff is both a hydrologic response to rainfall and a transport pathway for pollutants accumulated on urban surfaces. Integrated assessment therefore requires a coherent representation of rainfall--runoff generation, drainage hydraulics, pollutant mobilisation, water-quality routing, monitoring, model evaluation and management interventions. The U.S. Environmental Protection Agency Storm Water Management Model (EPA-SWMM) provides a widely used platform for single-event and continuous simulation of urban runoff quantity and quality. However, prediction credibility depends on catchment discretisation, rainfall and drainage data, pollutant-process assumptions, calibration observations, validation design and uncertainty treatment. This critical review examines the methodological links between runoff quantity and quality simulation, with emphasis on hydrology and hydraulics, pollutant buildup and washoff, event mean concentration (EMC), first-flush assessment, GIS representation, calibration and validation, uncertainty, and green infrastructure/low-impact development (GI/LID). Early evidence indicates that formal evaluation of water-quality predictions has been less common than runoff evaluation in the SWMM literature. Recent work also demonstrates that water-quality monitoring is constrained by the limited range of parameters measurable continuously and by site-specific sensor calibration and field-operation requirements. A recent large-catchment SWMM application illustrates the practical value and limitations of EMC-based nutrient modelling when pollutant observations are sparse. The review develops a decision-oriented framework for future application to a campus catchment in Bhopal, India. Such an application will require verified catchment and drainage data, local rainfall, flow observations and event-based water-quality measurements. The evidence synthesis remains in progress; conclusions are therefore provisional.
 \end{abstract}
 
-\textbf{Keywords:} urban stormwater; EPA-SWMM; runoff modelling; stormwater quality; buildup; washoff; event mean concentration; first flush; calibration; uncertainty; GIS; low-impact development.
+\begin{IEEEkeywords}\nUrban stormwater, EPA-SWMM, runoff modelling, stormwater quality, pollutant buildup and washoff, event mean concentration, first flush, calibration, uncertainty, GIS, low-impact development.\n\end{IEEEkeywords}
 
-\tableofcontents
-\newpage
 
 \section{Introduction}
 Urbanisation changes the partitioning and routing of rainfall through the replacement or fragmentation of pervious surfaces by roofs, roads, parking areas and other impervious surfaces. These changes can increase runoff volume and peak discharge, shorten catchment response time and alter connectivity between pollutant source areas and receiving waters. During dry periods, suspended solids, organic matter, nutrients, metals and other contaminants may accumulate on urban surfaces. Rainfall can mobilise part of this material and transport it through overland flow and drainage networks. Stormwater management is consequently a coupled quantity-and-quality problem.
 
-Urban stormwater models differ in their spatial and temporal resolution and in their representation of runoff generation, drainage hydraulics and water quality. EPA-SWMM is a dynamic rainfall--runoff model used for single-event and long-term simulation of runoff quantity and quality. Its subcatchment runoff component can generate runoff and pollutant loads, while its routing component transports flows through pipes, channels, storage and treatment elements \citep{rossman2022}. The model also includes water-quality buildup and washoff representations and low-impact-development controls. The availability of these components does not, by itself, guarantee accurate prediction: model performance depends on the quality of the input data, suitability of the process representation and adequacy of calibration and validation.
+Urban stormwater models differ in their spatial and temporal resolution and in their representation of runoff generation, drainage hydraulics and water quality. EPA-SWMM is a dynamic rainfall--runoff model used for single-event and long-term simulation of runoff quantity and quality. Its subcatchment runoff component can generate runoff and pollutant loads, while its routing component transports flows through pipes, channels, storage and treatment elements \\cite{rossman2022}. The model also includes water-quality buildup and washoff representations and low-impact-development controls. The availability of these components does not, by itself, guarantee accurate prediction: model performance depends on the quality of the input data, suitability of the process representation and adequacy of calibration and validation.
 
-A key distinction in the literature is between hydrologic performance and water-quality performance. A reasonable runoff hydrograph fit does not demonstrate that pollutant concentrations, event loads or pollutographs are accurate. Niazi et al. \citeyearpar{niazi2017} reviewed SWMM model evaluation and found that water-quality endpoints were formally evaluated less often than runoff endpoints in the set of studies they examined. Their review also identified gaps in diffuse pollutant representation, contaminant fate and transport, parameter estimation, uncertainty analysis and GI/LID effectiveness. These findings support the need to evaluate both quantity and quality explicitly rather than treating water quality as an optional post-processing step.
+A key distinction in the literature is between hydrologic performance and water-quality performance. A reasonable runoff hydrograph fit does not demonstrate that pollutant concentrations, event loads or pollutographs are accurate. Niazi et al. \\cite{niazi2017} reviewed SWMM model evaluation and found that water-quality endpoints were formally evaluated less often than runoff endpoints in the set of studies they examined. Their review also identified gaps in diffuse pollutant representation, contaminant fate and transport, parameter estimation, uncertainty analysis and GI/LID effectiveness. These findings support the need to evaluate both quantity and quality explicitly rather than treating water quality as an optional post-processing step.
 
-Pollutant processes introduce additional complexity. Buildup formulations represent the accumulation of pollutant mass during dry periods, while washoff formulations represent mobilisation and removal during rainfall and runoff. The appropriate functional form and parameter values may vary by pollutant, surface type, rainfall event and catchment scale. For example, Gaut et al. \citeyearpar{gaut2019} reported different washoff-model performance for particulate and dissolved pollutants. Bonhomme and Petrucci \citeyearpar{bonhomme2017} cautioned that parameters calibrated at catchment scale may lose a straightforward physical interpretation, even when the underlying buildup/washoff equations are physically motivated at smaller scales.
+Pollutant processes introduce additional complexity. Buildup formulations represent the accumulation of pollutant mass during dry periods, while washoff formulations represent mobilisation and removal during rainfall and runoff. The appropriate functional form and parameter values may vary by pollutant, surface type, rainfall event and catchment scale. For example, Gaut et al. \\cite{gaut2019} reported different washoff-model performance for particulate and dissolved pollutants. Bonhomme and Petrucci \\cite{bonhomme2017} cautioned that parameters calibrated at catchment scale may lose a straightforward physical interpretation, even when the underlying buildup/washoff equations are physically motivated at smaller scales.
 
-Monitoring is therefore part of model design, not merely a final validation step. Stormwater quality varies between sites, between events and within individual events. A review of continuous monitoring methods found that only a limited set of parameters had been measured directly at high temporal resolution for extended periods, while many target pollutants were inferred from proxy sensor measurements \citep{razguliaev2024}. Flow observations are also necessary: pollutant load is calculated from concentration and discharge over time, not from concentration alone.
+Monitoring is therefore part of model design, not merely a final validation step. Stormwater quality varies between sites, between events and within individual events. A review of continuous monitoring methods found that only a limited set of parameters had been measured directly at high temporal resolution for extended periods, while many target pollutants were inferred from proxy sensor measurements \\cite{razguliaev2024}. Flow observations are also necessary: pollutant load is calculated from concentration and discharge over time, not from concentration alone.
 
 \subsection{Aim and objectives}
 The aim of this paper is to critically review methods and evidence for integrated urban stormwater quantity and quality modelling using EPA-SWMM and to formulate a transparent framework for a future campus-catchment application in Bhopal, India.
@@ -88,9 +67,9 @@ The review is guided by five connected questions:
 
 \section{Review methodology}
 \subsection{Review design and current status}
-The review is being conducted as a critical integrative review. It is not currently described as a completed systematic review. A preliminary candidate bibliography has been assembled, and the first evidence audit has verified bibliographic details for seven records. Three papers have been appraised from accessible full texts: Niazi et al. \citeyearpar{niazi2017}, Razguliaev et al. \citeyearpar{razguliaev2024}, and Bhusal and Muthukumaran \citeyearpar{bhusal2026}. Four additional records in the current audit remain at abstract or publisher-excerpt level. This distinction is retained because bibliographic verification, abstract assessment and full-text appraisal are different levels of evidence.
+The review is being conducted as a critical integrative review. It is not currently described as a completed systematic review. A preliminary candidate bibliography has been assembled, and the first evidence audit has verified bibliographic details for seven records. Three papers have been appraised from accessible full texts: Niazi et al. \\cite{niazi2017}, Razguliaev et al. \\cite{razguliaev2024}, and Bhusal and Muthukumaran \\cite{bhusal2026}. Four additional records in the current audit remain at abstract or publisher-excerpt level. This distinction is retained because bibliographic verification, abstract assessment and full-text appraisal are different levels of evidence.
 
-The next review stage will expand full-text retrieval and screening across SWMM hydrology and hydraulics, pollutant-process modelling, calibration and uncertainty, GIS representation, and GI/LID. The final search dates, database-specific queries, deduplication procedure, screening counts and exclusion reasons will be recorded before any systematic-review reporting is considered. PRISMA 2020 may be used as a reporting guideline if the completed workflow meets the requirements of a systematic review; it is not a substitute for conducting the search and screening process \citep{page2021}.
+The next review stage will expand full-text retrieval and screening across SWMM hydrology and hydraulics, pollutant-process modelling, calibration and uncertainty, GIS representation, and GI/LID. The final search dates, database-specific queries, deduplication procedure, screening counts and exclusion reasons will be recorded before any systematic-review reporting is considered. PRISMA 2020 may be used as a reporting guideline if the completed workflow meets the requirements of a systematic review; it is not a substitute for conducting the search and screening process \\cite{page2021}.
 
 \subsection{Information sources and search concepts}
 The intended information sources include Scopus, Web of Science, Engineering Village, ASCE Library, ScienceDirect, SpringerLink, Wiley, Taylor \& Francis, Crossref and supplementary citation searching. Search concepts will combine terms for (i) SWMM and urban drainage, (ii) runoff quantity and hydraulic routing, (iii) stormwater quality and pollutant loads, (iv) buildup and washoff, (v) EMC and first flush, (vi) calibration, validation and uncertainty, (vii) GIS and catchment discretisation, and (viii) GI/LID and sustainable drainage.
@@ -132,9 +111,9 @@ where $t_0$ and $t_1$ define the event interval. Equation~\ref{eq:eventload} mak
 \section{Pollutant buildup and washoff}
 Buildup functions represent pollutant accumulation during dry-weather periods. Common conceptual forms include power, exponential and saturation-type functions. Washoff functions represent the mobilisation and removal of accumulated mass under rainfall and runoff, often using an exponential or rating-type relationship. These functions are parsimonious and can be useful where detailed mechanistic source data are unavailable, but their parameters require constituent-specific and site-specific justification.
 
-Soonthornnonda et al. \citeyearpar{soonthornnonda2008} developed a washoff model with pollutant-specific coefficients, illustrating that solids, metals, nutrients and microbial indicators need not share a common response. Gaut et al. \citeyearpar{gaut2019} examined six pollutants across 126 events and 12 sites in Singapore; the abstract-level evidence in the current audit indicates stronger performance for particulate TSS than for dissolved nutrients. The full-text appraisal of that study remains pending, so its detailed metrics and validation design will not be reported here as established findings.
+Soonthornnonda et al. \\cite{soonthornnonda2008} developed a washoff model with pollutant-specific coefficients, illustrating that solids, metals, nutrients and microbial indicators need not share a common response. Gaut et al. \\cite{gaut2019} examined six pollutants across 126 events and 12 sites in Singapore; the abstract-level evidence in the current audit indicates stronger performance for particulate TSS than for dissolved nutrients. The full-text appraisal of that study remains pending, so its detailed metrics and validation design will not be reported here as established findings.
 
-A scale problem also deserves attention. Bonhomme and Petrucci \citeyearpar{bonhomme2017} used a Bayesian calibration approach for a peri-urban catchment and argued that buildup/washoff parameters at catchment scale may not retain the physical meaning assigned to them from small-scale experiments. This raises a central issue for model interpretation: a good statistical fit does not necessarily prove that the calibrated parameters represent transferable physical processes.
+A scale problem also deserves attention. Bonhomme and Petrucci \\cite{bonhomme2017} used a Bayesian calibration approach for a peri-urban catchment and argued that buildup/washoff parameters at catchment scale may not retain the physical meaning assigned to them from small-scale experiments. This raises a central issue for model interpretation: a good statistical fit does not necessarily prove that the calibrated parameters represent transferable physical processes.
 
 For each pollutant, an SWMM application should document the constituent name and units, source-area assignment, buildup function, washoff function, parameter source, antecedent dry-period treatment, residual-mass assumption, simulation time step and calibration evidence. Where observations are sparse, parameters should be treated as uncertain and scenario results should be labelled accordingly.
 
@@ -151,7 +130,7 @@ First-flush analysis examines the relationship between cumulative pollutant mass
 
 \section{Monitoring, calibration, validation and uncertainty}
 \subsection{Monitoring design}
-Continuous monitoring can improve understanding of within-event stormwater quality dynamics, but the range of parameters measured directly at high temporal resolution remains limited. Razguliaev et al. \citeyearpar{razguliaev2024} reviewed 84 articles representing 56 independent studies across 16 countries and reported that only eight water-quality parameters had been measured directly on-site for extended periods in the reviewed literature. Many target pollutants were inferred from proxy variables, which requires site-specific calibration against laboratory measurements. Field operation, cleaning, sensor drift, power, data transmission and validation also affect data quality.
+Continuous monitoring can improve understanding of within-event stormwater quality dynamics, but the range of parameters measured directly at high temporal resolution remains limited. Razguliaev et al. \\cite{razguliaev2024} reviewed 84 articles representing 56 independent studies across 16 countries and reported that only eight water-quality parameters had been measured directly on-site for extended periods in the reviewed literature. Many target pollutants were inferred from proxy variables, which requires site-specific calibration against laboratory measurements. Field operation, cleaning, sensor drift, power, data transmission and validation also affect data quality.
 
 For a quantity--quality model, the minimum coherent monitoring package should pair rainfall, water level or discharge, and event-based water-quality samples. Rainfall and flow time steps should be sufficiently fine to capture event dynamics. Laboratory QA/QC, detection limits, sample preservation, missing-data handling and sensor calibration should be documented. Pollutant loads should be calculated only where concentration and flow observations can be aligned adequately in time.
 
@@ -169,15 +148,15 @@ Hydrology-only calibration is insufficient when water-quality predictions are a 
 \subsection{Uncertainty and parameter transferability}
 Uncertainty arises from rainfall inputs, catchment delineation, drainage geometry, land-cover classification, flow measurement, water-quality sampling, parameter estimation, model structure and operational changes. Parameter equifinality means that different parameter combinations can produce similar model outputs. Sensitivity analysis should identify which parameters most affect the decision-relevant outputs, while uncertainty analysis should communicate the range of plausible outcomes rather than presenting a single deterministic result as certain.
 
-Bhusal and Muthukumaran \citeyearpar{bhusal2026} applied SWMM 5.2 to a large, spatially heterogeneous catchment using an EMC-based nutrient approach. The paper is particularly relevant because it reports separate hydrologic and water-quality evaluation. Its hydrology was calibrated and validated, whereas TN evaluation relied on 22 observed concentration values and TP could not be validated owing to missing observations. The authors' EMC sensitivity scenarios improved TN bias but did not improve the reported correlation statistic. This case illustrates that improving average bias is not equivalent to reproducing event-specific concentration dynamics, and that model validation must be pollutant-specific.
+Bhusal and Muthukumaran \\cite{bhusal2026} applied SWMM 5.2 to a large, spatially heterogeneous catchment using an EMC-based nutrient approach. The paper is particularly relevant because it reports separate hydrologic and water-quality evaluation. Its hydrology was calibrated and validated, whereas TN evaluation relied on 22 observed concentration values and TP could not be validated owing to missing observations. The authors' EMC sensitivity scenarios improved TN bias but did not improve the reported correlation statistic. This case illustrates that improving average bias is not equivalent to reproducing event-specific concentration dynamics, and that model validation must be pollutant-specific.
 
 \section{GIS representation and catchment discretisation}
 GIS supports catchment boundary definition, subcatchment delineation, slope estimation, land-cover mapping, imperviousness assessment and drainage-network construction. DEM resolution, conditioning, coordinate reference system, outlet assignment and ground-truth checks influence the resulting drainage paths and catchment areas. Roofs, roads, parking, landscaped areas and open soil should be separated where their hydrologic or pollutant characteristics justify separate representation.
 
-The appropriate level of discretisation depends on data availability and the decision being supported. Fine spatial resolution can represent source-area heterogeneity but may increase parameter count and calibration burden. Coarse aggregation can hide local source contributions and drainage connectivity. The review will compare studies by catchment scale, number and basis of subcatchment divisions, land-use classes, drainage-network detail and availability of field verification. Tuomela et al. (2019) provide a relevant SWMM application focused on pollutant loads and source-area contributions, making source-area attribution an important extraction field in the expanded review. The study is currently included at metadata/abstract level in the evidence register; detailed methods and results will not be inferred until its full text is appraised \citep{tuomela2019}.
+The appropriate level of discretisation depends on data availability and the decision being supported. Fine spatial resolution can represent source-area heterogeneity but may increase parameter count and calibration burden. Coarse aggregation can hide local source contributions and drainage connectivity. The review will compare studies by catchment scale, number and basis of subcatchment divisions, land-use classes, drainage-network detail and availability of field verification. Tuomela et al. (2019) provide a relevant SWMM application focused on pollutant loads and source-area contributions, making source-area attribution an important extraction field in the expanded review. The study is currently included at metadata/abstract level in the evidence register; detailed methods and results will not be inferred until its full text is appraised \\cite{tuomela2019}.
 
 \section{Green infrastructure and low-impact development}
-GI/LID practices can reduce or delay runoff through infiltration, storage, evapotranspiration, filtration and retention. Candidate measures include green roofs, permeable pavements, bioretention cells, rain gardens, vegetated swales and detention or retention systems. Performance depends on design geometry, soil properties, storage depth, underdrains, antecedent moisture, rainfall regime, clogging and maintenance. EPA-SWMM includes generic LID controls, but the existence of a control object in the software does not establish that its parameterisation or predicted pollutant removal is valid for a particular site \citep{rossman2022}.
+GI/LID practices can reduce or delay runoff through infiltration, storage, evapotranspiration, filtration and retention. Candidate measures include green roofs, permeable pavements, bioretention cells, rain gardens, vegetated swales and detention or retention systems. Performance depends on design geometry, soil properties, storage depth, underdrains, antecedent moisture, rainfall regime, clogging and maintenance. EPA-SWMM includes generic LID controls, but the existence of a control object in the software does not establish that its parameterisation or predicted pollutant removal is valid for a particular site \\cite{rossman2022}.
 
 Quantity and quality outcomes should be reported separately. A reduction in runoff volume does not necessarily imply a proportional reduction in every pollutant. Treatment performance depends on pollutant form, media properties, bypass, residence time and maintenance. Studies based only on modelled scenarios should be distinguished from field studies with measured inflow and outflow. The completed review will prioritise evidence that reports both hydrologic and water-quality performance and makes clear whether outcomes are observed or simulated.
 
@@ -185,16 +164,16 @@ Quantity and quality outcomes should be reported separately. A reduction in runo
 The evidence audited so far supports several provisional conclusions.
 
 \subsection{Integrated evaluation remains less common than hydrologic evaluation}
-Niazi et al. \citeyearpar{niazi2017} reported that, among 93 studies with formal evaluation statistics, 67 evaluated runoff and 26 evaluated water-quality endpoints; 22 evaluated both. This imbalance supports a central methodological concern: studies should not be described as fully integrated or fully validated if only runoff has been evaluated.
+Niazi et al. \\cite{niazi2017} reported that, among 93 studies with formal evaluation statistics, 67 evaluated runoff and 26 evaluated water-quality endpoints; 22 evaluated both. This imbalance supports a central methodological concern: studies should not be described as fully integrated or fully validated if only runoff has been evaluated.
 
 \subsection{Water-quality observations constrain predictive claims}
-Continuous monitoring can reveal event dynamics, but the range of direct high-frequency measurements is limited and proxy relationships require local calibration \citep{razguliaev2024}. Where event observations are sparse, EMC approaches may support approximate load estimation, but they should not be presented as proof of event-scale pollutograph skill \citep{bhusal2026}.
+Continuous monitoring can reveal event dynamics, but the range of direct high-frequency measurements is limited and proxy relationships require local calibration \\cite{razguliaev2024}. Where event observations are sparse, EMC approaches may support approximate load estimation, but they should not be presented as proof of event-scale pollutograph skill \\cite{bhusal2026}.
 
 \subsection{Buildup/washoff parameters may be effective rather than universally physical}
-Constituent-specific washoff behaviour and catchment-scale parameter transferability require explicit scrutiny. The reviewed evidence does not justify applying one pollutant formulation or parameter set indiscriminately across particulate and dissolved constituents, land uses or catchment scales \citep{gaut2019,bonhomme2017,soonthornnonda2008}.
+Constituent-specific washoff behaviour and catchment-scale parameter transferability require explicit scrutiny. The reviewed evidence does not justify applying one pollutant formulation or parameter set indiscriminately across particulate and dissolved constituents, land uses or catchment scales \\cite{gaut2019,bonhomme2017,soonthornnonda2008}.
 
 \subsection{Monsoon transferability requires direct evidence}
-The monitoring literature reviewed by Razguliaev et al. \citeyearpar{razguliaev2024} under-represents tropical climates and low- and middle-income settings. Indian case studies should therefore be examined for rainfall intensity and temporal resolution, antecedent dry period, land-use composition, drainage connectivity, pollutant suite, sampling design and QA/QC. Transferability to Bhopal should be argued from these features, not assumed from geographic proximity alone.
+The monitoring literature reviewed by Razguliaev et al. \\cite{razguliaev2024} under-represents tropical climates and low- and middle-income settings. Indian case studies should therefore be examined for rainfall intensity and temporal resolution, antecedent dry period, land-use composition, drainage connectivity, pollutant suite, sampling design and QA/QC. Transferability to Bhopal should be argued from these features, not assumed from geographic proximity alone.
 
 \subsection{Provisional research gaps}
 The following gaps will be tested against the expanded literature corpus:
@@ -236,63 +215,66 @@ The next update will expand the evidence base in four areas: (i) integrated SWMM
 
 \begin{thebibliography}{99}
 
-\bibitem[Bhusal and Muthukumaran(2026)]{bhusal2026}
+\\bibitem{bhusal2026}
 Bhusal, M. R., and Muthukumaran, S. (2026).
 Event Mean Concentration-based Modelling Approach for a Large Scale Spatially Heterogenous Catchment using SWMM.
 \textit{Water Resources Management}, 40, Article 55.
 \url{https://doi.org/10.1007/s11269-025-04407-z}.
 
-\bibitem[Bonhomme and Petrucci(2017)]{bonhomme2017}
+\\bibitem{bonhomme2017}
 Bonhomme, C., and Petrucci, G. (2017).
 Should we trust build-up/wash-off water quality models at the scale of urban catchments?
 \textit{Water Research}, 108, 422--431.
 \url{https://doi.org/10.1016/j.watres.2016.11.027}.
 \textit{Evidence status in this review: abstract/publisher record assessed; full-text appraisal pending.}
 
-\bibitem[Gaut et al.(2019)]{gaut2019}
+\\bibitem{gaut2019}
 Gaut, J., Chua, L. H. C., Irvine, K. N., and Le, S. (2019).
 Modelling the washoff of pollutants in various forms from an urban catchment.
 \textit{Journal of Environmental Management}, 246, 374--383.
 \url{https://doi.org/10.1016/j.jenvman.2019.05.118}.
 \textit{Evidence status in this review: abstract assessed; full-text appraisal pending.}
 
-\bibitem[Tuomela et al.(2019)]{tuomela2019}
+\\bibitem{tuomela2019}
 Tuomela, C., Sillanp\\aa, N., and Koivusalo, H. (2019).
 Assessment of stormwater pollutant loads and source area contributions with storm water management model (SWMM).
 \textit{Journal of Environmental Management}, 233, 719--727.
 \url{https://doi.org/10.1016/j.jenvman.2018.12.061}.
 \textit{Evidence status in this review: bibliographic record and abstract-level information assessed; full-text appraisal pending.}
 
-\bibitem[Niazi et al.(2017)]{niazi2017}
+\\bibitem{niazi2017}
 Niazi, M., Nietch, C., Maghrebi, M., Jackson, N., Bennett, B. R., Tryby, M., and Massoudieh, A. (2017).
 Storm Water Management Model: Performance Review and Gap Analysis.
 \textit{Journal of Sustainable Water in the Built Environment}, 3(2).
 \url{https://doi.org/10.1061/JSWBAY.0000817}.
 
-\bibitem[Page et al.(2021)]{page2021}
+\\bibitem{page2021}
 Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., et al. (2021).
 The PRISMA 2020 statement: An updated guideline for reporting systematic reviews.
 \textit{BMJ}, 372, n71.
 \url{https://doi.org/10.1136/bmj.n71}.
 
-\bibitem[Razguliaev et al.(2024)]{razguliaev2024}
+\\bibitem{razguliaev2024}
 Razguliaev, N., Flanagan, K., Muthanna, T., and Viklander, M. (2024).
 Urban stormwater quality: A review of methods for continuous field monitoring.
 \textit{Water Research}, 249, 120929.
 \url{https://doi.org/10.1016/j.watres.2023.120929}.
 
-\bibitem[Rossman and Simon(2022)]{rossman2022}
+\\bibitem{rossman2022}
 Rossman, L. A., and Simon, M. (2022).
 \textit{Storm Water Management Model User's Manual, Version 5.2}.
 U.S. Environmental Protection Agency, EPA/600/R-22/030.
 \url{https://www.epa.gov/system/files/documents/2022-04/swmm-users-manual-version-5.2.pdf}.
 
-\bibitem[Soonthornnonda et al.(2008)]{soonthornnonda2008}
+\\bibitem{soonthornnonda2008}
 Soonthornnonda, P., Christensen, E. R., Liu, Y., and Li, J. (2008).
 A washoff model for stormwater pollutants.
 \textit{Science of the Total Environment}, 402(2--3), 248--256.
 \url{https://doi.org/10.1016/j.scitotenv.2008.04.036}.
 \textit{Evidence status in this review: abstract/publisher excerpts assessed; full-text appraisal pending.}
+
+\bibitem{tuomela2019}
+C. Tuomela, N. Sillanpää, and H. Koivusalo, ``Assessment of stormwater pollutant loads and source area contributions with storm water management model (SWMM),'' \textit{Journal of Environmental Management}, vol. 233, pp. 719--727, 2019, doi: 10.1016/j.jenvman.2018.12.061.
 
 \end{thebibliography}
 
