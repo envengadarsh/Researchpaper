@@ -8,12 +8,14 @@
 
 - [Critical review manuscript draft](manuscript/critical_review_draft.md)
 - [40-paper candidate annotated bibliography](literature_review/annotated_bibliography_40_candidates.md)
+- [Evidence verification ledger](literature_review/evidence_verification_ledger.md)
+- [Literature extraction matrix (CSV)](literature_review/literature_extraction_matrix.csv)
 - [Review protocol and search strategy](literature_review/review_protocol.md)
 - [Proposed MANIT Bhopal framework](methodology/proposed_framework.md)
 
 ## Status
 
-**Version 0.1 — initial research workspace committed.** The bibliography is a candidate corpus, not a claim that 40 full texts have been read. Full-text retrieval, eligibility screening, detailed extraction, quality appraisal and metadata verification remain pending. The manuscript is not submission-ready.
+**Version 0.2 — first evidence audit committed.** Six records have verified bibliographic metadata and abstract-level evidence; full-text appraisal remains pending. The candidate bibliography includes corrected Deletic (1998) DOI and complete Razguliaev et al. (2024) authors. The bibliography is a candidate corpus, not a claim that 40 full texts have been read. Full-text retrieval, eligibility screening, detailed extraction, quality appraisal and metadata verification remain pending. The manuscript is not submission-ready.
 
 ## Research questions
 
