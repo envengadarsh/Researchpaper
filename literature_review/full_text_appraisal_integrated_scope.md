@@ -55,6 +55,40 @@ This critical review evaluates continuous, high-temporal-resolution, in-situ sto
 
 **Extraction status:** Full-text appraised. Site-specific sensor performance values and all individual-study details have not been separately extracted.
 
+
+## Appraisal 3 — Bhusal and Muthukumaran (2026)
+
+**Reference:** Bhusal, M. R., & Muthukumaran, S. (2026). Event Mean Concentration-based Modelling Approach for a Large Scale Spatially Heterogenous Catchment using SWMM. *Water Resources Management*, 40, Article 55. https://doi.org/10.1007/s11269-025-04407-z
+
+**Access status:** Full open-access article read from the publisher page.
+
+### Purpose and study design
+The study evaluates SWMM 5.2 for continuous rainfall–runoff modelling and uses an event mean concentration (EMC) approach to estimate total nitrogen (TN) and total phosphorus (TP) wash-off in the Maribyrnong catchment, Australia. The catchment area is approximately 1,450 km². The authors delineated nine subcatchments using GIS and represented ten land-use classes. Rainfall, land-use, soil/infiltration and stream-network information were assembled from regional datasets. The data were split into a six-month warm-up period, two years for calibration and the remaining period for validation.
+
+The model's hydrology was calibrated and validated at the downstream Maribyrnong River location. Water-quality validation was conducted for TN concentration only; TP could not be validated because observed TP data were unavailable. The authors used literature-derived EMC values and sensitivity scenarios with increased TN EMC.
+
+### Main reported results
+- Hydrologic calibration: R² = 0.551, NSE = 0.522, KGE = 0.724 and PBIAS = 3.96%.
+- Hydrologic validation: R² = 0.6695, NSE = 0.603, KGE = 0.503 and PBIAS = 19.03%. The paper also reports poor logNSE performance, partly associated with very low flow values.
+- TN water-quality validation used 22 observed concentration values. R² remained 0.41 across the three EMC scenarios, while PBIAS improved from -56.47% to -39.24% and -21.7% as the assumed EMC was increased.
+- TN wash-off was strongly correlated with impervious runoff volume (r = 0.96). The study also found that simple pervious/impervious grouping was insufficient to explain all nutrient wash-off patterns; more detailed land-use disaggregation was informative.
+- The authors conclude that EMC-based modelling can be useful where buildup/washoff data are scarce, but static EMC values can fail to reproduce temporal concentration dynamics. They recommend further development of dynamic EMC values.
+
+### Critical appraisal
+**Strengths:** Uses a recent SWMM version; combines GIS-derived catchment heterogeneity, continuous hydrologic simulation and pollutant wash-off; reports separate hydrology and water-quality evaluation; makes the limits of data availability visible rather than claiming full validation.
+
+**Limitations and interpretation risks:**
+1. Water-quality validation is limited to 22 TN concentration observations; TP is not validated. Therefore the paper is not evidence of equally robust validation for both nutrients.
+2. Calibration occurs at the downstream river location. The authors acknowledge that this localized calibration can leave uncertainty in upstream subcatchment flow and pollutant contributions.
+3. The paper reports rainfall inputs described as hourly, but also describes the values as cumulative 24-hour rainfall normalized at 9 a.m. This temporal-resolution description should be checked carefully before using the rainfall setup as a precedent for event-scale modelling.
+4. The catchment is very large and contains both urban and non-urban areas. Its scale and routing representation differ substantially from a campus catchment with a defined engineered drainage network.
+5. Literature-derived EMCs reduce local monitoring requirements but introduce transferability uncertainty. Improving PBIAS by changing assumed EMC values does not, by itself, demonstrate that event timing or concentration dynamics are reproduced; R² remained unchanged in the scenarios.
+
+**Interpretation for this review:** This paper is a useful recent case study for the trade-off between process-based buildup/washoff parameterisation and the simpler EMC approach. It supports the need to (i) disaggregate meaningful land-use classes, (ii) retain runoff volume in pollutant-load interpretation, (iii) validate each pollutant separately, and (iv) distinguish long-term average load estimation from event-specific pollutograph prediction. For a smaller Bhopal campus application, the paper's large-scale catchment structure should not be copied directly.
+
+**Extraction status:** Full-text appraised. Supplementary tables and raw data were not independently downloaded; reported metrics and design details above are from the article text.
+
+
 ## Cross-paper synthesis: implications for the review
 
 1. **Coupled evaluation is less common than runoff evaluation alone.** Niazi et al. report 26 water-quality evaluations compared with 67 runoff evaluations, with 22 evaluating both. The manuscript should assess the balance between hydrologic and quality validation.
