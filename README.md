@@ -16,7 +16,7 @@
 
 ## Status
 
-**Version 0.3 — integrated scope selected; second evidence audit committed.** Six records have verified bibliographic metadata. Two full texts (Niazi et al., 2017; Razguliaev et al., 2024) have been appraised, while four records remain abstract-level only. A new full-text appraisal file records paper-level evidence, limitations and cross-paper implications. The 40-paper bibliography remains provisional; further screening, metadata checks and full-text appraisal are required. The manuscript is not submission-ready.
+**Version 0.3 — integrated scope selected; second evidence audit committed.** Six records have verified bibliographic metadata. Three full texts (Niazi et al., 2017; Razguliaev et al., 2024; Bhusal & Muthukumaran, 2026) have been appraised, while four records remain abstract-level only. A new full-text appraisal file records paper-level evidence, limitations and cross-paper implications. The 40-paper bibliography remains provisional; further screening, metadata checks and full-text appraisal are required. The manuscript is not submission-ready.
 
 ## Research questions
 
