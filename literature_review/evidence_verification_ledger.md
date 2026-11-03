@@ -8,10 +8,10 @@ This ledger records what was verified from publisher, PubMed/PMC or official EPA
 
 | Candidate | Metadata status | Evidence accessed | Full-text status | Notes for synthesis |
 |---|---|---|---|---|
-| Niazi et al. (2017), *Storm Water Management Model: Performance Review and Gap Analysis*, DOI 10.1061/JSWBAY.0000817 | Verified: title, all seven authors, journal, volume/issue, publication date and DOI | ASCE publisher record and PubMed/PMC record; PMC manuscript is indexed | Full text appears available via PMC, but complete reading/extraction is still pending | The review concludes SWMM is adequate for many medium/large hydrologic applications but identifies gaps in mechanistic diffuse-source representation, pollutant fate/transport and GI/LID effectiveness |
+| Niazi et al. (2017), *Storm Water Management Model: Performance Review and Gap Analysis*, DOI 10.1061/JSWBAY.0000817 | Verified: title, all seven authors, journal, volume/issue, publication date and DOI | ASCE publisher record and PubMed/PMC record; PMC manuscript is indexed | Full text appraised on 3 November 2026 | The review concludes SWMM is adequate for many medium/large hydrologic applications but identifies gaps in mechanistic diffuse-source representation, pollutant fate/transport and GI/LID effectiveness |
 | Soonthornnonda et al. (2008), *A washoff model for stormwater pollutants*, DOI 10.1016/j.scitotenv.2008.04.036 | Verified: four authors, journal, volume 402, issues 2–3, pages 248–256, DOI | PubMed and ScienceDirect abstract | Abstract assessed; full text not yet appraised | Linear buildup-based washoff formulation; coefficients estimated for metals, TSS, BOD5, TP and microbial indicators; relevant to constituent-specific parameterisation |
 | Gaut et al. (2019), *Modelling the washoff of pollutants in various forms from an urban catchment*, DOI 10.1016/j.jenvman.2019.05.118 | Verified: four authors, journal, volume 246, pages 374–383, DOI | PubMed and ScienceDirect abstract | Abstract assessed; full text not yet appraised | Uses six pollutants, 126 events and 12 Singapore sites; exponential washoff fit was strongest for TSS and weakest for dissolved nutrients; cautions against treating dissolved/mixed pollutants as a fraction of solids |
-| Razguliaev et al. (2024), *Urban stormwater quality: A review of methods for continuous field monitoring*, DOI 10.1016/j.watres.2023.120929 | Verified: four authors, journal, volume 249, article 120929, DOI | ScienceDirect and PubMed records; open-access label shown by ScienceDirect | Full text not yet downloaded/read | Monitoring review reports a limited set of parameters directly measurable at high temporal resolution and highlights field-operation/data-quality constraints |
+| Razguliaev et al. (2024), *Urban stormwater quality: A review of methods for continuous field monitoring*, DOI 10.1016/j.watres.2023.120929 | Verified: four authors, journal, volume 249, article 120929, DOI | ScienceDirect and PubMed records; open-access label shown by ScienceDirect | Full text appraised on 3 November 2026 | Monitoring review reports a limited set of parameters directly measurable at high temporal resolution and highlights field-operation/data-quality constraints |
 | Deletic (1998), *The first flush load of urban surface runoff*, DOI 10.1016/S0043-1354(97)00470-3 | Verified title, journal, volume 32, issue 8, pages 2462–2470 and corrected DOI | ScienceDirect abstract record | Abstract assessed; full text not yet appraised | Examines continuous monitoring at road inlets in two asphalt catchments and uses cumulative pollutant-load curves and FF20 |
 | Mishra & Botlaguduru (2025), *Characterization of stormwater runoff in the Powai region of Mumbai*, DOI 10.1007/s10661-025-14028-z | Verified: both authors, journal, volume 197, issue 5, article 577, publication date and DOI | PubMed record and abstract | Abstract assessed; full text not yet appraised | Highly relevant Indian monsoon context; do not infer transferability to Bhopal without comparing catchment, rainfall, land use, constituents and sampling design |
 
@@ -35,10 +35,11 @@ Official source: https://www.epa.gov/water-research/storm-water-management-model
 - Dotto et al. (2011): exact title/journal/DOI need confirmation.
 - Any candidate with incomplete authors, missing pages/article number or DOI mismatch must be checked against publisher metadata before final citation.
 
-## Status after first audit
+## Status after scope selection and second audit (3 November 2026)
 
+- Scope selected: integrated urban stormwater quantity and quality modelling, with EPA-SWMM as the principal platform.
 - Six records have verified bibliographic metadata.
-- Abstract-level evidence has been examined for the six records.
-- No claim is made that six complete full texts have been appraised.
-- The remaining candidate records still require independent metadata verification.
+- Two papers (Niazi et al. 2017; Razguliaev et al. 2024) have been read and full-text appraised; four remain abstract-level only.
+- A detailed appraisal and cross-paper synthesis is recorded in `full_text_appraisal_integrated_scope.md`.
+- The remaining candidate records still require independent metadata verification and eligibility screening.
 - The 40-paper set remains provisional; remove or replace unverifiable/non-peer-reviewed records rather than forcing the count to 40.
